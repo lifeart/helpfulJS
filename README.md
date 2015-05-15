@@ -1,14 +1,16 @@
 # helpfulJS
 Helpful JS code
 
-inputLimit.js => 
+### inputLimit.js =>
 
-  example: 
+Example: 
   
+ ```
   <input id="one">
   <input id="two">
   <input id="three">
+  ```
   
-  sum of chars in these fields should be <= 190
+Sum of chars in these inputs should be <= 190
   
-  setInputsLimit(['one','two','three'],190); 
+  `setInputsLimit(['one','two','three'],190);`
