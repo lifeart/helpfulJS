@@ -73,4 +73,47 @@ AW.up('callhe');
 AW.up('callMe');
 ```
 
-After this allDoneCallback called;
+After this `allDoneCallback(result)` called;
+
+
+### localStorage.js =>
+
+`Storage` this is helper class extends `localStorage` functionality, using `globalKey`.
+
+Example:
+
+Standart local storage look like: 
+
+`DOMAIN.SOTORAGE[KEY]=VALUE`;
+
+`Storage` with `globalKey` look like:
+
+`DOMAIN.SOTORAGE[globalKey][KEY]=VALUE`;
+
+If more then one JS APP used in one domain it help to keep all storage data personally for each app;
+
+```
+// window.localStorage.toJSON() : null;
+
+var storageOne = new Storage('appOne'); 
+
+// window.localStorage.toJSON(): {appOne:null}
+
+var storageTwo = new Storage('appTwo'); 
+
+// window.localStorage.toJSON(): {appOne:null,appTwo:null}
+
+storageOne.set('id',1);
+storageTwo.set('id',2);
+
+storageOne.get('id') -> 1
+storageTwo.get('id') -> 2
+
+// window.localStorage.toJSON(): {appOne:{id:1},appTwo:{id:2}}
+
+window.localStorage.get('id') -> null
+window.localStorage.get('appOne').toJSON().id -> 1
+
+storageOne.clear(); -> // window.localStorage.toJSON(): {appTwo:null}
+
+```
