@@ -58,7 +58,7 @@ AW.up();
 ```
 or: 
 ```
-var AW = new ActionWaiter(['callMe:2','callhe','callShe:3'],allDoneCallback);
+var AW = new ActionWaiter(['callMe:2','callhe','callShe:3'],allDoneCallback,true);
 
 AW.up('callShe');
 AW.up('callShe');
