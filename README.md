@@ -10,13 +10,18 @@ Example:
   <input id="two">
   <input id="three">
   ```
-  
+
+This class is input helper for controling sum of length for related inputs.
 Sum of chars in these inputs should be <= 190
   
   `setInputsLimit(['one','two','three'],190);`
 
 
 ### actionWaiter.js =>
+
+This class is some like $.Deferred();
+
+Usefull for asynch model loading
 
 Example: 
 
