@@ -25,7 +25,7 @@
       } else this.eventNames.push(this.eventsArray[i]);
     }
 
-    if (this.limit!==this.eventNames.length) this.limit = this.eventNames.length;
+    if (this.limit!==this.eventNames.lenth&&Array.isArray(arguments[0])) this.limit = this.eventNames.length;
 
     this.dataSet = [];
 
