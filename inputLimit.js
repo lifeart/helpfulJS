@@ -52,7 +52,9 @@ function setInputsLimit(selectors,limit) {
 		}
 		
 		if ( this.currentLength.total > this.inputLimit ) {
-			el.value = el.value.slice(this.inputLimit-this.currentLength.total);
+			el.value = el.value.slice(0, Math.abs(this.inputLimit-this.currentLength.total));
+			this.calcCurrentLength();
+			this.lengthControl(el);
 		}
 
 	}
