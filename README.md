@@ -1,6 +1,15 @@
 # helpfulJS
 Helpful JS code
 
+### INN_Validator =>
+
+  
+ ```
+ ValidateINN(inn) => {result:true,msg:"success"};
+  ```
+
+This class is INN validator component
+
 ### inputLimit.js =>
 
 Example: 
